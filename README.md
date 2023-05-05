@@ -8,10 +8,10 @@
 Desenvolva suas habilidades com React para aplicações Front-End utilizando componentes criados com Typescript, veja como trabalhar com Propriedades tipadas, como deixar o retorno dos conteúdos mais previsíveis e como criar uma integração do seu back-end com o front-end.
 <hr>
  
-```
-Fundamentos do TypeScript - 5 atividades 
 
-```
+### Fundamentos do TypeScript - 5 atividades ✔
+ > Criando uma Homepage com React 
+
 ```
 Introdução ao React com TypeScript - 5 atividades 
 
