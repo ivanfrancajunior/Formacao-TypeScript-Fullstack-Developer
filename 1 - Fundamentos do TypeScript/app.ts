@@ -6,10 +6,12 @@ import {CompanyAccount} from './class/CompanyAccount'
 //DioBank - esboço
 //herança + polimorfismo
 
-console.log('DEFAULT: ',DefaultAccount)
+//console.log('DEFAULT: ',DefaultAccount)
 
 const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Jota', 10)
-console.log('ACC PESSOA COMUM:', peopleAccount )
+console.log('ACC PESSOA COMUM:', peopleAccount)
+peopleAccount.setName('Marcio')
+console.log(peopleAccount)
 
 const companyAccount: CompanyAccount = new CompanyAccount('Dio', 29)
-console.log('ACC EMPRESA:', companyAccount )
+//console.log('ACC EMPRESA:', companyAccount )
