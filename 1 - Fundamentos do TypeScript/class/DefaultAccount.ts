@@ -10,14 +10,14 @@ export abstract class DefaultAccount {
         
     }
 
-    deposit =() => {
+    deposit =():void => {
         console.log('Você depoistou')
     }
-    withdraw = () => {
+    withdraw = ():void => {
         console.log('Você sacou!')
     }
     
-    getBalance = () => {
+    getBalance = ():void => {
         console.log(this.balance)
     }
 }

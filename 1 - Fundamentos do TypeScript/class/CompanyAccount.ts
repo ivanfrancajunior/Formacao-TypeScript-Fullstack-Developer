@@ -1,5 +1,6 @@
 import { DefaultAccount } from './DefaultAccount' 
 
+
 export class CompanyAccount extends DefaultAccount {
     
     constructor(name: string, accountNumber: number) {
@@ -7,5 +8,8 @@ export class CompanyAccount extends DefaultAccount {
     }
     getLoan = () => {
         console.log('Vôce pegou um emprestimo ok?')
+    }
+    depoisit = () => {
+        console.log('A empresa depositou')
     }
 }
