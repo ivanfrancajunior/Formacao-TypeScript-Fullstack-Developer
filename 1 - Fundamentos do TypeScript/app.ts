@@ -1,25 +1,15 @@
+import {DefaultAccount} from './class/DefaultAccount'
+import {PeopleAccount} from './class/PeopleAccount'
+import {CompanyAccount} from './class/CompanyAccount'
+
+
 //DioBank - esboço
+//herança + polimorfismo
 
-class Account {
-    name: string;
-    accountNumber: number;
+console.log('DEFAULT: ',DefaultAccount)
 
-    constructor(name: string, accountNumber: number) {
-        this.name = name; 
-        this.accountNumber = accountNumber
-    }
+const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Jota', 10)
+console.log('ACC PESSOA COMUM:', peopleAccount )
 
-    deposit =() => {
-        console.log('Você depoistou')
-    }
-    withdraw = () => {
-        console.log('Você sacou!')
-    }
-}
-console.log(Account)
-
-const newAccount: Account = new Account('Dono', 1)
-console.log('acc do Dono:', newAccount)
-
-const accout: Account = new Account('João', 28)
-accout.deposit()
+const companyAccount: CompanyAccount = new CompanyAccount('Dio', 29)
+console.log('ACC EMPRESA:', companyAccount )
