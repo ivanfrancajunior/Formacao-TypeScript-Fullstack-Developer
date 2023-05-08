@@ -1,11 +1,25 @@
 import { Text, Input, Flex, Button } from "@chakra-ui/react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { greeting } from '../services/greeting';
+import { api } from "../services/api"; 
 
 export const Card = () => {
   
   const [email,setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  useEffect (() => {
+     try {
+      const getData = async () => {
+        const data = await api
+        console.log(data)
+        
+    }
+    getData()
+     } catch (error) {
+      console.log(error)
+     }
+  })
   
 
   return (
