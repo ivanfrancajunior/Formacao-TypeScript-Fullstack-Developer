@@ -1,12 +1,10 @@
-import {useState} from 'react'
 import { ChakraProvider, Flex } from '@chakra-ui/react'
-import { greeting } from './services/login';
 import { Header } from './components/Header';
 import { Card } from './components/Card'
 
 function App() {
 
-  
+
 
 
   return (
@@ -21,7 +19,7 @@ function App() {
         direction={"column"}
       >
         <Header />
-        <Card onClick={greeting}   />
+        <Card/>
 
       </Flex>
     </ChakraProvider>
