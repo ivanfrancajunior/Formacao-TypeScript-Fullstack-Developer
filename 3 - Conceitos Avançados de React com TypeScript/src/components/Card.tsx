@@ -1,26 +1,32 @@
 import { Text, Input, Flex, Button } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
-import { greeting } from '../services/greeting';
-import { api } from "../services/api"; 
+import { login } from '../services/login';
+import { api } from "../services/api";
 
+interface IUserData {
+  email: string
+  password: string
+  name: string
+}
 export const Card = () => {
-  
-  const [email,setEmail] = useState('')
-  const [password, setPassword] = useState('')
 
-  useEffect (() => {
-     try {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [userData, setUserData] = useState<null | IUserData>()
+
+  useEffect(() => {
+    try {
       const getData = async () => {
-        const data = await api
-        console.log(data)
-        
-    }
-    getData()
-     } catch (error) {
+        const data: any | IUserData = await api
+        setUserData(data)
+
+      }
+      getData()
+    } catch (error) {
       console.log(error)
-     }
+    }
   })
-  
+
 
   return (
     <Flex direction={"column"}
@@ -31,16 +37,17 @@ export const Card = () => {
       borderRadius={10}
       fontSize={24}
       backgroundColor={'#fff'}
-       >
+    >
       <Flex
-      direction={"column"} alignItems={'center'} >
+        direction={"column"} alignItems={'center'} >
         <Text marginBottom={45} fontSize={20} color={"black"} >
-          Faça seu login
+        {userData? userData.name : 'Faça seu login'}
+          
         </Text>
-        <Input placeholder={'Email'} marginBottom={3} type='text' color={"black"} value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <Input placeholder={'Senha'} marginBottom={3} type='password' color={"black"} value={password } onChange={(e) => setPassword(e.target.value)}/>
-        <Button color={"black"} backgroundColor={'#a1b567'} onClick={() => greeting(email)}> Acessar</Button>
-     </Flex>
+        <Input placeholder={'Email'} marginBottom={3} type='text' color={"black"} value={email} onChange={(e) => setEmail(e.target.value)} />
+        <Input placeholder={'Senha'} marginBottom={3} type='password' color={"black"} value={password} onChange={(e) => setPassword(e.target.value)} />
+        <Button color={"black"} backgroundColor={'#a1b567'} onClick={() => login(email)}> Acessar</Button>
+      </Flex>
     </Flex>
   )
 }
