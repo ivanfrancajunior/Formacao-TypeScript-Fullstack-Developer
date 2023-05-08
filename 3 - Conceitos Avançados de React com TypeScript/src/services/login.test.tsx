@@ -6,7 +6,7 @@ describe('login', () => {
     window.alert = mockAlert
     const mockEmail = 'teste@teste.com'
 
-    it('Deve exibir um alert com boas vindas',async() => {
+    it('Deve exibir um alert com boas vindas', async () => {
         await login(mockEmail)
         expect(mockAlert).toHaveBeenCalledWith(`Bem vindo ${mockEmail}!`)
     })
