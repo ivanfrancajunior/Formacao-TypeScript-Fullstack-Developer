@@ -5,6 +5,7 @@ export const Header  = () => {
       <Text
         color='white'
         fontSize='50'
+        marginTop={'40px'}
         marginBottom={10}
          >  Dio Bank </Text>
     </Flex>

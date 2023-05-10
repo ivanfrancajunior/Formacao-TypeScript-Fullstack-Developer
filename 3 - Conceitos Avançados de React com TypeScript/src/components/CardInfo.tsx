@@ -5,7 +5,7 @@ interface IcardInfo{
 }
 const CardInfo = ({mainContent, content}: IcardInfo) => {
   return (
-      <Box backgroundColor={`white`} minHeight={120} padding={8} borderRadius={15}>
+      <Box backgroundColor={`white`} minHeight={120} padding={8} borderRadius={15} marginTop={40}>
       <Text  fontSize={'2xl'} fontWeight={800} >{ mainContent}</Text>
       <Text fontSize={'xl'}>{ content}</Text>
     </Box>
