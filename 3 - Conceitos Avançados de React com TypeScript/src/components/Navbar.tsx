@@ -1,6 +1,6 @@
 import { Flex, Button, Text, Box } from "@chakra-ui/react";
 import {useContext} from 'react'
-import { AppContext } from "../App";
+import { AppContext } from "./AppContext";
 
 const Navbar = () => {
     const context = useContext(AppContext)

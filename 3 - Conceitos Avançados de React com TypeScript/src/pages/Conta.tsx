@@ -1,8 +1,10 @@
 import { Center, Flex, Spinner  } from '@chakra-ui/react'
-import React, {useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import CardInfo from '../components/CardInfo'
 import { useNavigate, useParams } from 'react-router-dom'
 import { api } from '../services/api'
+import { useContext } from 'react'
+import { AppContext } from '../components/AppContext'
 
 interface IUserData {
   email: string
@@ -36,14 +38,16 @@ const Conta = () => {
   if (userData && id !== userData.id) {
     navigate('/')
   }
-
+  
+  const mainuser = useContext(AppContext)
   return (
+
     <Center>
         <Flex  gap={8} paddingTop={16} color={'black'}  >
         {userData === undefined || userData === null ?
           (<h1> <Spinner color='#a1b567'/>  </h1>) :
           (<>
-            <CardInfo mainContent={`Bem vindo de volta ${userData?.name}!`} content={`Último acesso - ${dataAtual.getDay()}/${dataAtual.getMonth()}/${dataAtual.getFullYear()}`}/>
+            <CardInfo mainContent={`Bem vindo de volta ${mainuser?  mainuser.user : userData?.name}!`} content={`Último acesso - ${dataAtual.getDay()}/${dataAtual.getMonth()}/${dataAtual.getFullYear()}`}/>
             
             <CardInfo mainContent={`Saldo:`} content={`R$${(userData.balance).toFixed(2)}`}/>
             
