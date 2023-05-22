@@ -10,16 +10,16 @@ Desenvolva suas habilidades com React para aplicações Front-End utilizando com
  
 
 ### Fundamentos do TypeScript - 5 atividades ✔
+  > Construindo Uma App Simples de Banco Com Typescript 
+
+
+### Introdução ao React com TypeScript - 5 atividades ✔
  > Criando uma Homepage com React 
 
-```
-Introdução ao React com TypeScript - 5 atividades 
 
-```
-```
-Conceitos Avançados de React com TypeScript - 7 atividades
+### Conceitos Avançados de React com TypeScript - 7 atividades ✔
+> Criando a Página Com os Detalhes do Usuário Com React
 
-```
 ```
 Introdução ao Node com TypeScript - 5 atividades
 
